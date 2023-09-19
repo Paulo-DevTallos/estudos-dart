@@ -45,9 +45,10 @@ void main() {
   double myHeight = 1.67;
   // a variavel const não permite a alteração de dados em uma variavel
   // seguindo a mesma primicia de final que tambem não permite alteração.
+  // existe tambem o tipo var para declaração de variavel var.
   const String myName = 'Paulo Sergio';
-  String teste = 'Só um teste usando const ${myName = 'teste'}';
-  print(teste);
+  //String teste = 'Só um teste usando const ${myName = 'teste'}';
+  // print(teste);
 
   List<dynamic> aboutMe = [myAge, myHeight, myName];
 
@@ -69,4 +70,36 @@ void main() {
   print(phraseName);
   print(phraseAge);
   print(aboutMe);
+
+  //==========================================================================================================
+  /** trabalhando com condicionais */
+  int personAge = 32;
+  double personHeight = 1.67;
+  const String personName = "Paulo Sergio";
+  final String nickName;
+  nickName = "Paulinho";
+
+  bool legalAge;
+  final String ageStatus;
+
+  if (personAge >= 18) {
+    legalAge = true;
+    ageStatus = 'eu sou maior de idade';
+  } else {
+    legalAge = false;
+    ageStatus = 'eu não sou maior de idade';
+  }
+
+  String personPhrase = 'Meu nome é ${personName}, \n'
+      'mas meu apelido é: ${nickName}, \n'
+      'eu tenho ${personHeight}m de altura, \n'
+      'e minha idade é ${personAge}. \n'
+      'e ${ageStatus}';
+
+  print(personPhrase);
+
+//===========================================================================================================
+  for (int i = 0; i < 5; i++) {
+    print(i);
+  }
 }
