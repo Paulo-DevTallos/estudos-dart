@@ -1,5 +1,5 @@
 //função main - todo o código em Dart é executado dentro da função main
-// Para executar um arquivo .dart "dart run meu-path ou ."
+// Para executar um arquivo .dart "dart run meu-path ou '.' para o diretório atual"
 void main() {
   // variáveis - (Int, Double)
   // int - uma variável criada sem valor significa que seu valor é null, o Dart não permite criar variaveis vazias.
@@ -71,7 +71,7 @@ void main() {
   print(phraseAge);
   print(aboutMe);
 
-  //==========================================================================================================
+  //==================================================== estruturas condicionais ======================================================
   /** trabalhando com condicionais */
   int personAge = 32;
   double personHeight = 1.67;
@@ -98,8 +98,23 @@ void main() {
 
   print(personPhrase);
 
-//===========================================================================================================
-  for (int i = 0; i < 5; i++) {
-    print(i);
+//==================================================== Laços de repetição - (loops) ======================================================
+  for (int i = 1; i < 5; i = i + 2) {
+    // nessa abordagem ele contabiliza os numeros impares menores que 5
+    print('Conclui, número de voltas no loop ${i}');
   }
+
+  int energy = 100;
+  int score = 0;
+
+  while (energy > 0) {
+    score++;
+    energy = energy - 6;
+    print('Mais uma repetição ${score}');
+  }
+
+  do {
+    print('Mais uma repetição');
+    energy = energy - 6;
+  } while (energy > 0);
 }
